@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ru.intr13.dbfixer</groupId>
+	<artifactId>dbfixer-server</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1</version>
+	<repositories>
+		<repository>
+			<id>JBoss</id>
+			<url>http://repository.jboss.com/maven2/</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.jboss.remoting</groupId>
+			<artifactId>jboss-remoting</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging-log4j</artifactId>
+			<version>2.2.0.CR1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss</groupId>
+			<artifactId>jboss-common-core</artifactId>
+			<version>2.2.14.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>oswego-concurrent</groupId>
+			<artifactId>concurrent</artifactId>
+			<version>1.3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.serialization</groupId>
+			<artifactId>jboss-serialization</artifactId>
+			<version>1.1.0.Beta1</version>
+		</dependency>
+	</dependencies>
+</project>
