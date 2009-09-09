@@ -10,8 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import org.hibernate.annotations.Cascade;
-
 @Entity
 public class Parent implements Serializable {
 
@@ -32,7 +30,6 @@ public class Parent implements Serializable {
 	}
 
 	@OneToMany(mappedBy = "parent", cascade = CascadeType.ALL)
-	@Cascade( { org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.DELETE_ORPHAN })
 	public List<Child> getChilds() {
 		return childs;
 	}
