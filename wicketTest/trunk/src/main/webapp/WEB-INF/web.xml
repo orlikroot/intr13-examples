@@ -1,0 +1,17 @@
+<web-app>
+	<display-name>Wicket Examples</display-name>
+	<filter>
+		<filter-name>HelloWorldApplication</filter-name>
+		<filter-class>org.apache.wicket.protocol.http.WicketFilter
+		</filter-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>ru.intr13.example.wicketTest.HelloWorldApplication
+			</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>HelloWorldApplication</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>
