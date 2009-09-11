@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test" pageWidth="842" pageHeight="595" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" isIgnorePagination="true">
+	<reportFont name="text" isDefault="true" fontName="Arial" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+	<style name="Normal" isDefault="true" fontSize="12" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+	<field name="text" class="java.lang.String"/>
+	<title>
+		<band height="40">
+			<textField hyperlinkType="None">
+				<reportElement x="1" y="0" width="800" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Kva"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="130">
+   			
+   		</band>
+	</pageHeader>
+	<detail>
+		<band height="200" isSplitAllowed="false">
+		<textField hyperlinkType="None">
+				<reportElement x="1" y="0" width="800" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{text}]]></textFieldExpression>
+			</textField>
+		<image hyperlinkType="None">  
+   				<reportElement x="0" y="0" width="161" height="129"/>  
+   				<graphicElement/>
+   				 <imageExpression class="java.net.URL"><![CDATA[new URL("http://localhost:8080/test.png")]]>
+   				 </imageExpression>    
+   			</image>  
+		</band>
+	</detail>
+</jasperReport>
