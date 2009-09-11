@@ -15,6 +15,7 @@ public class Main {
 		Data data3 = new Data("three");
 		dataDao.save(data3);
 		System.out.println(dataDao.find("%o%").size());
+		dataDao.shutdown();
 	}
 
 }

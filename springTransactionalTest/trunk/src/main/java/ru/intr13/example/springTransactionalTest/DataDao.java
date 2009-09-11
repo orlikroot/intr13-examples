@@ -9,5 +9,9 @@ public interface DataDao {
 	Data save(Data data);
 
 	Collection<Data> find(String text);
+	
+	void shutdown();
+
+	void checkpoint();
 
 }

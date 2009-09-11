@@ -34,4 +34,14 @@ public class DataHibernateDao extends HibernateDaoSupport implements DataDao {
 	public Collection<Data> find(String text) {
 		return getSession().createQuery("from Data d where d.text like :text").setString("text", text).list();
 	}
+
+	@Override
+	public void shutdown() {
+		getSession().createSQLQuery("SHUTDOWN").executeUpdate();
+	}
+	
+	@Override
+	public void checkpoint() {
+		getSession().createSQLQuery("CHECKPOINT").executeUpdate();
+	}
 }

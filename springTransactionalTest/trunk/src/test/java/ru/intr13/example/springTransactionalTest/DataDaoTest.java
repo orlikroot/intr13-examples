@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import junit.framework.Assert;
 
+import org.junit.After;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -24,6 +25,11 @@ public class DataDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
 
 	@Autowired
 	private PlatformTransactionManager transactionManager;
+	
+	@After
+	public void after(){
+		dataDao.checkpoint();
+	}
 
 	@Test
 	public void simpleTest() {
