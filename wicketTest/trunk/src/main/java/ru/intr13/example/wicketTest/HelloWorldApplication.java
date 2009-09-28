@@ -7,7 +7,7 @@ public class HelloWorldApplication extends WebApplication {
 
 	}
 
-	public Class getHomePage() {
+	public Class<HelloWorld> getHomePage() {
 		return HelloWorld.class;
 	}
 }
