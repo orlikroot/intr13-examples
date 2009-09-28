@@ -5,7 +5,6 @@ import java.util.UUID;
 
 import junit.framework.Assert;
 
-import org.junit.After;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -14,6 +13,8 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 @ContextConfiguration(locations = { "/applicationContext.xml" })
@@ -25,11 +26,6 @@ public class DataDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
 
 	@Autowired
 	private PlatformTransactionManager transactionManager;
-	
-	@After
-	public void after(){
-		dataDao.checkpoint();
-	}
 
 	@Test
 	public void simpleTest() {
