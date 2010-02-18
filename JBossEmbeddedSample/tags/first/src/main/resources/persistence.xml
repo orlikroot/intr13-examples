@@ -1,0 +1,13 @@
+<!-- Persistence file for EJB3 application -->
+<persistence>
+  <persistence-unit name="cal">
+     <jta-data-source>java:/SampleDS</jta-data-source>
+     <properties>
+       <property name="hibernate.hbm2ddl.auto"
+              value="create-drop"/>
+         <property name="jboss.entity.manager.jndi.name" value="java:/EntityManagers/sampledb"/>
+     </properties>
+  </persistence-unit>
+
+</persistence>
+
