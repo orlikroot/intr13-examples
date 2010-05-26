@@ -37,5 +37,14 @@
 			<groupId>javax.ejb</groupId>
 			<artifactId>ejb-api</artifactId>
 		</dependency>
+		<!--
+			<dependency> <groupId>jboss.jbossts</groupId>
+			<artifactId>jbossjta-integration</artifactId> <scope>provided</scope>
+			</dependency>
+		-->
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>transaction-api</artifactId>
+		</dependency>
 	</dependencies>
 </project>
