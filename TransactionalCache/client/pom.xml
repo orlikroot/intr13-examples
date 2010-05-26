@@ -13,7 +13,7 @@
 	<packaging>jar</packaging>
 	<name>Client Project</name>
 	<build>
-		<finalName>zeon</finalName>
+		<finalName>test</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -38,7 +38,7 @@
 									implementation="org.apache.maven.plugins.shade.resource.ComponentsXmlResourceTransformer"/>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>Main</mainClass>
+									<mainClass>ru.intr13.example.jboss.transactionalCache.Test</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
