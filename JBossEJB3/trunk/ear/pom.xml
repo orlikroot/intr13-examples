@@ -14,6 +14,31 @@
 	<name>EAR Project</name>
 	<build>
 		<finalName>${final-name}</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.cargo</groupId>
+					<artifactId>cargo-maven2-plugin</artifactId>
+					<configuration>
+						<container>
+							<containerId>jboss5x</containerId>
+							<home>${jboss-home}</home>
+							<append>false</append>
+						</container>
+						<configuration>
+							<type>existing</type>
+							<home>${jboss-home}/server/default</home>
+							<properties>
+								<cargo.jboss.configuration>default</cargo.jboss.configuration>
+								<cargo.rmi.port>1099</cargo.rmi.port>
+								<cargo.servlet.port>8080</cargo.servlet.port>
+								<cargo.logging>hight</cargo.logging>
+							</properties>
+						</configuration>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<resources>
 			<resource>
 				<directory>src/main/application</directory>
@@ -51,23 +76,6 @@
 			<plugin>
 				<groupId>org.codehaus.cargo</groupId>
 				<artifactId>cargo-maven2-plugin</artifactId>
-				<configuration>
-					<container>
-						<containerId>jboss5x</containerId>
-						<home>${jboss.home}</home>
-						<append>false</append>
-					</container>
-					<configuration>
-						<type>existing</type>
-						<home>${jboss.home}/server/default</home>
-						<properties>
-							<cargo.jboss.configuration>default</cargo.jboss.configuration>
-							<cargo.rmi.port>1099</cargo.rmi.port>
-							<cargo.servlet.port>8080</cargo.servlet.port>
-							<cargo.logging>hight</cargo.logging>
-						</properties>
-					</configuration>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

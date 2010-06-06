@@ -4,6 +4,7 @@
 	<artifactId>application</artifactId>
 	<groupId>ru.intr13.example.jboss.ejb3</groupId>
 	<version>0.0.1</version>
+	<name>JBossEJB3</name>
 	<packaging>pom</packaging>
 	<repositories>
 		<repository>
@@ -253,7 +254,7 @@
 		<profile>
 			<id>author-intr13</id>
 			<properties>
-				<jboss.home>D:/work/jboss-ejb3/jboss-5.1.0.GA</jboss.home>
+				<jboss-home>D:/work/jboss-ejb3/jboss-5.1.0.GA</jboss-home>
 			</properties>
 		</profile>
 		<profile>
