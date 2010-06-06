@@ -256,5 +256,60 @@
 				<jboss.home>D:/work/jboss-ejb3/jboss-5.1.0.GA</jboss.home>
 			</properties>
 		</profile>
+		<profile>
+			<id>ejb3-api</id>
+			<activation>
+				<file>
+					<exists>pom.xml</exists>
+				</file>
+			</activation>
+			<modules>
+				<module>ejb3-api</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>ejb3-impl</id>
+			<activation>
+				<file>
+					<exists>pom.xml</exists>
+				</file>
+			</activation>
+			<modules>
+				<module>ejb3-impl</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>ejb3-test</id>
+			<activation>
+				<file>
+					<exists>pom.xml</exists>
+				</file>
+			</activation>
+			<modules>
+				<module>ejb3-test</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>ear</id>
+			<activation>
+				<file>
+					<exists>pom.xml</exists>
+				</file>
+			</activation>
+			<modules>
+				<module>ear</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>client</id>
+			<activation>
+				<file>
+					<exists>pom.xml</exists>
+				</file>
+			</activation>
+			<modules>
+				<module>client</module>
+			</modules>
+		</profile>
 	</profiles>
 </project>
