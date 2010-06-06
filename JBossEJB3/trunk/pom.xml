@@ -239,13 +239,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<modules>
-		<module>ejb3-api</module>
-		<module>ejb3-impl</module>
-		<module>ejb3-test</module>
-		<module>ear</module>
-		<module>client</module>
-	</modules>
 	<properties>
 		<jboss-version>5.1.0.GA</jboss-version>
 		<jboss-embedded-version>beta3.SP12</jboss-embedded-version>
